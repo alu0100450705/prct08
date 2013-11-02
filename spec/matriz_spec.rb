@@ -18,5 +18,8 @@ describe Matriz do
 		(defined?(@MatrizA.columnas)).should be_true
 	end
 
+	it "Se debe poder sumar dos matrices de enteros" do
+    (@MatrizA + @MatrizB ).matrix.inspect.should == "[[1, 2], [3, 3]]"
+  end
   
   end
