@@ -1,5 +1,6 @@
 class Matriz
-
+	
+	attr_reader :matrix, :filas, :columnas
 
 	def initialize(matriz)
 		@matrix = matriz
