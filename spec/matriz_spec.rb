@@ -7,7 +7,7 @@ describe Matriz do
   before :each do
     @MatrizA = Matriz.new([[1,1],[2,2]])
 	@MatrizB = Matriz.new([[1,1],[2,2]])
-	@MatrizC = Matriz.new([[1,2],[3,3]])
+	@MatrizC = Matriz.new([[2,2],[4,4]])
   end
   
 
@@ -18,9 +18,18 @@ describe Matriz do
 	it "Deben existir columnas " do
 		(defined?(@MatrizA.columnas)).should be_true
 	end
+	
+	it "Tamano de filas " do
+		@MatrizA.filas.should eq 2
+	end
+	
+	it "Tamano de columnas " do
+		@MatrizA.columnas.should eq 2
+	end
 
 	it "Se debe poder sumar dos matrices de enteros" do
-    (@MatrizA + @MatrizB ).should eq @MatrizC
+    (@MatrizA + @MatrizB ).should == @MatrizC
   end
+  
   
   end
