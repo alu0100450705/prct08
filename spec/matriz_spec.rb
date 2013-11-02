@@ -27,9 +27,8 @@ describe Matriz do
 		@MatrizA.columnas.should eq 2
 	end
 
-	it "Se debe poder sumar dos matrices de enteros" do
+  it "Se debe poder sumar dos matrices de enteros" do
     (@MatrizA + @MatrizB ).should == @MatrizC
   end
-  
   
   end
