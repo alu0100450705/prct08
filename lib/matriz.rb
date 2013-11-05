@@ -26,17 +26,15 @@ class Matriz
    
 	   def -(other)
 				 raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas
-         i = 0
-         j = 0
          sum = @matriz
-         while i < @filas   		
-           while j < @columnas
+         @filas.times do |i|   		
+           @columnas.times do |j|
                 sum[i][j] = sum[i][j] - other.matriz[i][j]
-                j += 1
+                
            end
-           i += 1
-           j = 0
          end
          return sum
    end
+   
+
 end
