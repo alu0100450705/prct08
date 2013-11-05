@@ -30,6 +30,9 @@ describe Matriz do
     (@MatrizA + @MatrizB ).should == [[2,2],[4,4]]
   end
   
+   it "Se debe poder restar dos matrices de enteros" do
+    (@MatrizA - @MatrizB ).should == [[0,0],[0,0]]
+  end
   
   
   end
