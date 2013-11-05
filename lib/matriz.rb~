@@ -69,12 +69,31 @@ class Matriz
       matriz[i][j] = k
    end
    
+   #Para comprobar que dos matrices son equivalentes,primero se comprueba sus dimensiones. Si tienen las mismas dimensiones se comprueba que el valor de ambas matrices sean iguales en las mismas posiciones,si esto es así se devuelve true,false en otro caso.
+   def ==(other)
+      dev=true
+      if ((self.filas.size==other.filas.size) && (self.columnas.size==other.columnas.size))
+         @filas.times do |i| 
+            @columnas.times do |j|
+               if (self.matriz[i,j] != other.matriz[i,j])
+	          dev=false
+	       else
+	       end
+	    end
+	 end
+      else
+         dev=false
+      end
+      return dev
+   end
+   
 end
 
 m1=Matriz.new([[2,0,1],[3,0,0],[5,1,1]])
-m2=Matriz.new([[1,0,1],[1,2,1],[1,1,0]])
-m3=m1+m2
-puts m3
+m4=Matriz.new([[2,0,1],[3,0,0],[5,1,1]])
+# m2=Matriz.new([[1,0,1],[1,2,1],[1,1,0]])
+# m3=m1+m2
+puts m1==m4
 # puts m3
 # puts m3
 # puts m3
