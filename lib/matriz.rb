@@ -1,6 +1,6 @@
 class Matriz
    attr_reader :matriz, :filas, :columnas
-
+   
    def initialize(matriz)
       @matriz = Array.new(matriz)
       @filas = matriz.size
@@ -87,13 +87,26 @@ class Matriz
       return dev
    end
    
+   #corregir para que devuelve un objeto tipo Matriz
+   def producto_escalar(k,matriz)
+      sum = @matriz
+      @filas.times do |i|   		
+         @columnas.times do |j|
+            sum[i][j] *= k  
+         end
+      end
+      return sum
+   end
+   
 end
 
 m1=Matriz.new([[2,0,1],[3,0,0],[5,1,1]])
 m4=Matriz.new([[2,0,1],[3,0,0],[5,1,1]])
 # m2=Matriz.new([[1,0,1],[1,2,1],[1,1,0]])
 # m3=m1+m2
-puts m1==m4
+# puts m1==m4
+m3=m1.producto_escalar(5,m3)
+puts m3
 # puts m3
 # puts m3
 # puts m3
