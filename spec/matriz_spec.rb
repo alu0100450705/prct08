@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
-require 'matrix'
+
 require "./lib/matriz.rb"
 
 describe Matriz do
 
   before :each do
-    @MatrizA = Matriz.new([[1,1],[2,2]])
+  @MatrizA = Matriz.new([[1,1],[2,2]])
 	@MatrizB = Matriz.new([[1,1],[2,2]])
-	@MatrizC = Matriz.new([[2,2],[4,4]])
   end
   
 
@@ -28,7 +27,9 @@ describe Matriz do
 	end
 
   it "Se debe poder sumar dos matrices de enteros" do
-    (@MatrizA + @MatrizB ).should == @MatrizC
+    (@MatrizA + @MatrizB ).should == [[2,2],[4,4]]
   end
+  
+  
   
   end
