@@ -25,6 +25,10 @@ describe Matriz do
 	it "Tamano de columnas " do
 		@MatrizA.columnas.should eq 2
 	end
+	
+	it "Se puede accerdera un subindice" do 
+		@MatrizA.matriz[0][0].should eq 1
+	end
 
   it "Se debe poder sumar dos matrices de enteros" do
     (@MatrizA + @MatrizB ).should == [[2,2],[4,4]]
@@ -35,7 +39,7 @@ describe Matriz do
   end
   
   it "Se debe poder multiplicar por un numero" do
-    (@MatrizA * 2 ).should == [[2,2],[4,4]]
+    (@MatrizA * (2) ).should == [[2,2],[4,4]]
   end
   
   end

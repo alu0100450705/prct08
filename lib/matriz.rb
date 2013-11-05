@@ -36,5 +36,15 @@ class Matriz
          return sum
    end
    
+      def *(other)
+         sum = @matriz
+         @filas.times do |i|   		
+           @columnas.times do |j|
+                sum[i][j] = sum[i][j] * other
+                
+           end
+         end
+         return sum
+   end
 
 end
