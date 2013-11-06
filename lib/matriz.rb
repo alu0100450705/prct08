@@ -31,7 +31,7 @@ class Matriz
       resta = Matriz.new(matriz)
       dev_filas.times do |i|   		
          dev_columnas.times do |j|
-            resta.matriz[i][j]= self.matriz[i][j] - other.matriz[i][j]             
+            resta.matriz[i][j] = self.matriz[i][j] - other.matriz[i][j]             
          end
       end
       return resta  #devuelve un tipo matriz modificando el objeto m1 si se hace m3=m1+m2
@@ -40,13 +40,13 @@ class Matriz
    #Dos matrices A y B son multiplicables si el número de columnas de A coincide con el número de filas de B.
    def *(other)
 #       if ()
-      sum = @matriz
+      mul = Matriz.new(matriz)
       dev_filas.times do |i|   		
          dev_columnas.times do |j|
-            sum[i][j] = sum[i][j] * other.matriz[i][j]
+            mul.matriz[i][j] = self.matriz[i][j] * other
          end
       end
-      return sum
+      return mul
    end
 
    def to_s

@@ -7,7 +7,8 @@ describe Matriz do
   before :each do
      @MatrizA = Matriz.new([[1,1],[2,2]])
     @MatrizB = Matriz.new([[1,1],[2,2]])
-	Matriz_Resultado = [[2,2],[4,4]]
+	@Matriz_Resultado = Matriz.new([[2,2],[4,4]])
+	@Matriz_Resultado1 = Matriz.new([[0,0],[0,0]])
   end
   
 
@@ -32,15 +33,16 @@ describe Matriz do
 	end
 
   it "Se debe poder sumar dos matrices de enteros" do
-    (@MatrizA + @MatrizB ).should eq Matriz_Resultado
+
+   ( @MatrizA + @MatrizB ).should eq @Matriz_Resultado
   end
   
    it "Se debe poder restar dos matrices de enteros" do
-    (@MatrizA - @MatrizB ).should eq [[0,0],[0,0]]
+    (@MatrizA - @MatrizB ).should eq @Matriz_Resultado1
   end
   
   it "Se debe poder multiplicar por un numero" do
-    (@MatrizA * (2) ).should eq Matriz_Resultado
+    (@MatrizA * (2) ).should eq @Matriz_Resultado
   end
   
   end
