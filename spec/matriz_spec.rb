@@ -37,12 +37,9 @@ describe Matriz do
 	end
 	
 	it "Se puede modificar un subindice" do 
-	
 		@MatrizC.matriz[0][0] = 2
 		@MatrizA.matriz[0][0].should eq 1
-	
 	end
-	
 	
 	it "Se debe poder sumar dos matrices de enteros" do
 		( @MatrizA + @MatrizB ).should eq @Matriz_Resultado
@@ -65,7 +62,7 @@ describe Matriz do
   end
   
   it "Se debe poder multiplicar por un numero" do 
-		(@MatrizAmul * @MatrizBmul).should eq @Matriz_Resultado_mul
+	(@MatrizAmul * @MatrizBmul).should eq @Matriz_Resultado_mul
   end
   
   
