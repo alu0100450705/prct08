@@ -97,15 +97,15 @@ class Matriz
       return dev
    end
    
-   #corregir para que devuelve un objeto tipo Matriz
-   def producto_escalar(k,matriz)
-      sum = @matriz
-      @filas.times do |i|   		
-         @columnas.times do |j|
-            sum[i][j] *= k  
+   def -@ 
+   op = Matriz.new(matriz)
+      dev_filas.times do |i|   		
+         dev_columnas.times do |j|
+            op.matriz[i][j] = -self.matriz[i][j]
          end
       end
-      return sum
+      return op
+   
    end
    
 end
