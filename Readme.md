@@ -7,4 +7,82 @@ Considere el desarrollo de una clase Ruby para representar Matrices.
 
 Funciones de la clase.
 
-1. 
+1. def initialize(matriz)
+      
+  
+
+   def dev_filas
+   
+   
+   def dev_columnas
+    
+   
+   def +(other)
+      
+   
+   def -(other)
+     
+   
+   #Dos matrices A y B son multiplicables si el número de columnas de A coincide con el número de filas de B.
+   def *(other)
+#      
+
+   def to_s
+     
+   
+   def to_m(vector)
+   
+   
+   def [](i,j)
+    
+   
+   #Funcion que 
+   def []=(i, j, k)
+    
+   #Para comprobar que dos matrices son equivalentes,primero se comprueba sus dimensiones. Si tienen las mismas dimensiones se comprueba que el valor de ambas matrices sean iguales en las mismas posiciones,si esto es así se devuelve true,false en otro caso.
+   def ==(other)
+    
+   
+   def -@ 
+  
+   def dev_filas
+      
+   
+   def dev_columnas
+      
+   
+   def +(other)
+      
+   
+   def -(other)
+     
+   def *(other)
+   
+   def to_s
+     
+  
+   
+   def to_m(vector)
+        
+     
+   end
+   
+
+  
+   
+   def [](i,j)
+     
+   
+   #Funcion que 
+   def []=(i, j, k)
+      
+   
+   #Para comprobar que dos matrices son equivalentes,primero se comprueba sus dimensiones. Si tienen las mismas dimensiones se comprueba que el valor de ambas matrices sean iguales en las mismas posiciones,si esto es así se devuelve true,false en otro caso.
+   def ==(other)
+    
+   
+   def -@ 
+   
+  
+   
+

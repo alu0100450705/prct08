@@ -38,7 +38,7 @@ class Matriz
    end
    
    #Dos matrices A y B son multiplicables si el número de columnas de A coincide con el número de filas de B.
-   def *(other)
+   def Producto (other)
 #       if ()
       mul = Matriz.new(matriz)
       dev_filas.times do |i|   		
@@ -58,10 +58,7 @@ class Matriz
       end
    end
    
-   def to_m(vector)
-        
-     
-   end
+
    
 #    
 #       muestra la matriz (los indices empiezan por 0) seleccionando en el primer elemento el subarray al que pertenece el elemento que se quiere mostrar ,luego con el otro atributo seleccionamos la posicion que ocupa dicho elemento en este subvector.
@@ -108,11 +105,23 @@ class Matriz
    
    end
    
+   def * (other)
+    sum = Matriz.new([[0,0,0],[0,0,0],[0,0,0]])
+    dev_filas.times do |i|   
+        other.columnas.times do |j|
+           dev_columnas.times do |k|            
+              sum.matriz[i][j] += self.matriz[i][k] * other.matriz[k][j]
+           end
+        end
+    end
+    return sum
+  end
+   
 end
 
-m1=Matriz.new([[2,0,1],[3,0,0],[5,1,1]])
+ m1=Matriz.new([[2,0,1],[3,0,0],[5,1,1]])
 m2=Matriz.new([[1,0,1],[1,2,1],[1,1,0]])
-m3=m1+m2
+m3=m1*m2
 # m4=m1-m2
 puts m3
 # puts m4
