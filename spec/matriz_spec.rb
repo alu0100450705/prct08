@@ -45,4 +45,8 @@ describe Matriz do
     (@MatrizA * (2) ).should eq @Matriz_Resultado
   end
   
+  it "Se debe poder compara 2 matrices" do
+	(@MatrizA == @MatrizB).should eq true
+  end
+  
   end
