@@ -5,8 +5,8 @@ require "./lib/matriz.rb"
 describe Matriz do
 
   before :each do
-  @MatrizA = Matriz.new([[1,1],[2,2]])
-	@MatrizB = Matriz.new([[1,1],[2,2]])
+     @MatrizA = Matriz.new([[1,1],[2,2]])
+    @MatrizB = Matriz.new([[1,1],[2,2]])
 	Matriz_Resultado = [[2,2],[4,4]]
   end
   
