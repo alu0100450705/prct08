@@ -1,3 +1,6 @@
+
+require "./lib/racional.rb"
+
 class Matriz
    attr_reader :matriz, :filas, :columnas
    
@@ -116,7 +119,7 @@ class Matriz
     dev_filas.times do |i|   
         other.columnas.times do |j|
            dev_columnas.times do |k|            
-              sum.matriz[i][j] += self.matriz[i][k] * other.matriz[k][j]
+              sum.matriz[i][j] = sum.matriz[i][j] + self.matriz[i][k] * other.matriz[k][j]
            end
         end
     end
@@ -125,9 +128,21 @@ class Matriz
    
 end
 
-m1=Matriz.new([[2,0,1],[3,0,0],[5,1,1]])
-m2=Matriz.new([[1,0,1],[1,2,1],[1,1,0]])
-m3=m1*m2
+
+=begin 
+cuarto = Fraccion.new(1, 4)
+	quinto = Fraccion.new(1, 5)
+	
+	medio = Fraccion.new(1, 2)
+	quinto2 = Fraccion.new(2, 5)
+  
+	MatrizA_frac = Matriz.new([[cuarto,cuarto],[quinto,quinto]])
+	MatrizB_frac = Matriz.new([[cuarto,cuarto],[quinto,quinto]])
+	Matriz_Resultado_frac = Matriz.new([[medio,medio],[quinto2,quinto2]])
+	
+m3=MatrizA_frac+MatrizB_frac
+
 # m4=m1-m2
 puts m3
 # puts m4
+=end
