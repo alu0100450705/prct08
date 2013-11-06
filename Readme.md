@@ -7,82 +7,46 @@ Considere el desarrollo de una clase Ruby para representar Matrices.
 
 Funciones de la clase.
 
-1. def initialize(matriz)
-      
+   def initialize(matriz): Método que inicializa un objeto de tipo matriz pasada por parámetro.Se guardan el tamaño de las filas y las columnas. 
+            
   
-
-   def dev_filas
+   def dev_filas: Método que devuelve el numero de filas
    
    
-   def dev_columnas
+   def dev_columnas: Método que devuelve el numero de columnas
     
    
-   def +(other)
+   def +(other): Función que suma una matriz con otra pasada por parámetro. El resultado lo almacena en un nuevo objeto de tipo matriz
       
    
-   def -(other)
+   def -(other): Función que resta una matriz con otra pasada por parámetro. El resultado lo almacena en un nuevo objeto de tipo matriz
      
    
-   #Dos matrices A y B son multiplicables si el número de columnas de A coincide con el número de filas de B.
-   def *(other)
-#      
+   
+   def *(other): Método que multiplica dos matrices 
+      Nota: Dos matrices A y B son multiplicables si el número de columnas de A coincide con el número de filas de B.
+   
 
-   def to_s
-     
    
-   def to_m(vector)
+   def to_s: Método que imprime un objeto de tipo matriz.
    
    
-   def [](i,j)
+   def [](i,j): Método de acceso a una determinada posicion del vector. Devuelve el valor que se encuentra en esa posicion
     
    
-   #Funcion que 
-   def []=(i, j, k)
+   def []=(i, j, k): Función que asigna a una posición (i,j) a un determinado valor k
     
    #Para comprobar que dos matrices son equivalentes,primero se comprueba sus dimensiones. Si tienen las mismas dimensiones se comprueba que el valor de ambas matrices sean iguales en las mismas posiciones,si esto es así se devuelve true,false en otro caso.
    def ==(other)
     
    
-   def -@ 
-  
-   def dev_filas
-      
-   
-   def dev_columnas
-      
-   
-   def +(other)
-      
-   
-   def -(other)
-     
-   def *(other)
-   
-   def to_s
-     
-  
-   
-   def to_m(vector)
-        
-     
-   end
-   
+   def -@: Método que realiza la opuesta de la matriz que llama al méotodo
 
-  
    
-   def [](i,j)
-     
-   
-   #Funcion que 
-   def []=(i, j, k)
-      
-   
-   #Para comprobar que dos matrices son equivalentes,primero se comprueba sus dimensiones. Si tienen las mismas dimensiones se comprueba que el valor de ambas matrices sean iguales en las mismas posiciones,si esto es así se devuelve true,false en otro caso.
    def ==(other)
+      Nota: Para comprobar que dos matrices son equivalentes,primero se comprueba sus dimensiones. Si tienen las mismas dimensiones se comprueba que el valor de ambas matrices sean iguales en las mismas posiciones,si esto es así se devuelve true,false en otro caso.
     
-   
-   def -@ 
-   
+  
   
    
 
