@@ -15,6 +15,7 @@ class Matriz
       return @columnas  
    end
    
+   #Sobrecargado el + para poder sumar 2 matrices
    def +(other)
       raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas       
       sum = Matriz.new(matriz)  #inicializas el vector sum con el primer con el primer
@@ -26,6 +27,7 @@ class Matriz
       return sum #devuelve un tipo array modificando el objeto m1 si se hace m3=m1+m2 -> Se necesita q sea tipo Matriz
    end
    
+   #Sobrecargado el - para poder restar 2 matrices
    def -(other)
       raise ArgumentError, "La longitud de las matrices no coincide." unless @filas == other.filas && @columnas == other.columnas
       resta = Matriz.new(matriz)
@@ -49,6 +51,7 @@ class Matriz
       return mul
    end
 
+	#Imprime la matrices
    def to_s
       dev_filas.times do |i|   
          dev_columnas.times do |j|
@@ -94,6 +97,8 @@ class Matriz
       return dev
    end
    
+   
+   #Realiza el opuesto de una matriz
    def -@ 
    op = Matriz.new(matriz)
       dev_filas.times do |i|   		
@@ -105,6 +110,7 @@ class Matriz
    
    end
    
+   #Multiplica 2 matrices
    def * (other)
     sum = Matriz.new([[0,0,0],[0,0,0],[0,0,0]])
     dev_filas.times do |i|   
@@ -119,7 +125,7 @@ class Matriz
    
 end
 
- m1=Matriz.new([[2,0,1],[3,0,0],[5,1,1]])
+m1=Matriz.new([[2,0,1],[3,0,0],[5,1,1]])
 m2=Matriz.new([[1,0,1],[1,2,1],[1,1,0]])
 m3=m1*m2
 # m4=m1-m2
