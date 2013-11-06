@@ -14,11 +14,8 @@ describe Matriz do
 	@MatrizAmul = Matriz.new([[2,0,1],[3,0,0],[5,1,1]])
     @MatrizBmul = Matriz.new([[1,0,1],[1,2,1],[1,1,0]])
     @Matriz_Resultado_mul = Matriz.new([[3,1,2],[3,0,3],[7,3,6]])
-    
-    
   end
   
-
 	it "Deben existir filas " do
 		(defined?(@MatrizA.filas)).should be_true
 	end
