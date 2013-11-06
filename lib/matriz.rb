@@ -38,7 +38,7 @@ class Matriz
    end
    
    #Dos matrices A y B son multiplicables si el número de columnas de A coincide con el número de filas de B.
-   def Producto (other)
+   def Producto_escalar (other)
 #       if ()
       mul = Matriz.new(matriz)
       dev_filas.times do |i|   		
