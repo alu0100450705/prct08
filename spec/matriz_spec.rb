@@ -68,6 +68,10 @@ describe Matriz do
     (@MatrizA.Producto_escalar (2) ).should eq @Matriz_Resultado
   end
   
+  it "Se debe poder multiplicar 2 matrices de enteros" do
+    (@MatrizAmul *  @MatrizBmul ).should eq @Matriz_Resultado_mul
+  end
+  
   it "Se debe poder compara 2 matrices" do
 	(@MatrizA == @MatrizB).should eq true
   end
@@ -76,19 +80,18 @@ describe Matriz do
 	(-@MatrizA).should eq @Matrizop
   end
   
-  it "Se debe poder multiplicar por un numero" do 
-	(@MatrizAmul * @MatrizBmul).should eq @Matriz_Resultado_mul
-  end
-  
   it "Se debe poder sumar dos matrices de racionales" do
-	(@MatrizA_frac + @MatrizB_frac).to_s.should eq @Matriz_Resultado_frac.to_s
+	(@MatrizA_frac + @MatrizB_frac).should eq @Matriz_Resultado_frac
 	
  end
  
   it "Se debe poder restar dos matrices de racionales" do
-	(@MatrizA_frac - @MatrizB_frac).to_s.should eq @Matriz_Resultado1.to_s
+	(@MatrizA_frac - @MatrizB_frac).should eq @Matriz_Resultado_frac_rest
  end
  
-	
-	
+   it "Se debe poder multiplicar dos matrices de racionales" do
+	(@MatrizA_frac * @MatrizB_frac).to_s.should eq (@Matriz_Resultado_frac_mul.to_s)
+ end
+ 
+ 
 end

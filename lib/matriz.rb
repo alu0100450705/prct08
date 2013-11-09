@@ -1,4 +1,3 @@
-
 require "./lib/racional.rb"
 
 class Matriz
@@ -58,10 +57,12 @@ class Matriz
    def to_s
       dev_filas.times do |i|   
          dev_columnas.times do |j|
-	    print "#{matriz[i][j]}  "
+			print "#{matriz[i][j]}  "
          end
 	 puts
       end
+      puts 
+      puts
    end
    
 
@@ -115,16 +116,24 @@ class Matriz
    
    #Multiplica 2 matrices
    def * (other)
-    sum = Matriz.new([[0,0,0],[0,0,0],[0,0,0]])
-    dev_filas.times do |i|   
-        other.columnas.times do |j|
-           dev_columnas.times do |k|            
-              sum.matriz[i][j] = sum.matriz[i][j] + self.matriz[i][k] * other.matriz[k][j]
-           end
-        end
-    end
-    return sum
-  end
+   
+    raise ArgumentError, "La longitud de las matrices no coincide." unless @columnas == other.filas
+                elemento = Array.new
+                acumulado = 0
+                @filas.times do |i|
+                        elemento_fila = Array.new
+                        other.columnas.times do |j|
+                                acumulado = 0
+                                @columnas.times do |k|
+                                        suma = @matriz[i][k] * other.matriz[k][j]
+                                        acumulado = suma + acumulado
+                                end
+                                elemento_fila << acumulado
+                        end
+                        elemento << elemento_fila
+                end
+                Matriz.new(elemento)
+      end
    
 end
 
